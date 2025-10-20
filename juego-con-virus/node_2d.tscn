@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxq07q70ke5tf"]
+
+[ext_resource type="Texture2D" uid="uid://c8ofku1p2km5y" path="res://assets/backgrounds/fondo.png" id="1_wtcfe"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Fondo" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(640, 360)
+scale = Vector2(0.66481483, 0.66481483)
+texture = ExtResource("1_wtcfe")
+
+[node name="personajes" type="Node2D" parent="."]
+
+[node name="Makoto" type="Node2D" parent="personajes"]
+
+[node name="dialogos_base" type="Node2D" parent="."]
+
+[node name="dialogos" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 332.0
+offset_top = 480.0
+offset_right = 1121.0
+offset_bottom = 660.0
+
+[node name="makoto" type="Control" parent="dialogos"]
+anchors_preset = 0
+offset_left = 8.0
+offset_top = 65.0
+offset_right = 796.0
+offset_bottom = 170.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="dialogos/makoto"]
+layout_mode = 0
+offset_right = 717.0
+offset_bottom = 180.0
